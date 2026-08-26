@@ -1,17 +1,38 @@
 aid: percipient-ai
 name: Percipient.ai
-description: 'Percipient.ai is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Percipient.ai is a Silicon Valley artificial intelligence, machine learning and computer
+  vision company, founded in 2017 by Founder & CEO Balan Ayyar, that builds Mirage - an intelligence analysis
+  platform for United States national security and intelligence missions. Mirage performs faster-than-real-time
+  exploitation of unstructured multimedia, visual and multi-INT data across three modules: an FMV module
+  for full motion video, still imagery and multi-INT sensor data supporting identity creation, network
+  discovery, pattern-of-life analysis and geo-correlation; a cloud GSM geospatial module providing geo-fenced
+  alerting, change detection, custom object detection and temporal analysis; and a VRM vehicle recognition
+  module delivered as a mobile appliance for mobile and fixed surveillance with home-station cross-mission
+  correlation. The platform is deployed both at the edge for live stream ingest and in the cloud at petabyte
+  scale, and has been operationally procured by organizations in the US Intelligence Community and the
+  National Geospatial-Intelligence Agency. Percipient.ai sells Mirage through federal contracting vehicles
+  and is listed as Awardable on the CDAO Tradewinds Solutions Marketplace. It operates no public developer
+  program: as of August 2026 it publishes no API, developer portal, API reference, SDK or machine-readable
+  contract of any kind.'
+image: https://percipient.ai/wp-content/uploads/2020/07/preview.png
 url: https://raw.githubusercontent.com/api-evangelist/percipient-ai/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: 'enrichment pass 2026-08-26: no public API surface'
 specificationVersion: '0.20'
 created: '2026-08-26'
 modified: '2026-08-26'
 tags:
-- Company
+- Artificial Intelligence
+- Machine Learning
+- Computer Vision
+- National Security
+- Defense
+- Intelligence Analysis
+- Geospatial
+- Video Analytics
+- Government
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +41,39 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://forgeglobal.com/percipient-ai_stock/
+  url: https://percipient.ai/
+- type: Blog
+  url: https://percipient.ai/news/
+- type: BlogRSS
+  url: https://percipient.ai/feed/
+- type: LLMsTxt
+  url: llms/percipient-ai-llms.txt
+- type: DomainSecurity
+  url: security/percipient-ai-domain-security.yml
+- type: Plans
+  url: plans/percipient-ai-plans-pricing.yml
+x-enrichment:
+  date: '2026-08-26'
+  status: minimal
+  artifacts_added: 6
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: 'Percipient.ai sells Mirage as a deployed analyst platform to US Government and intelligence
+    customers, not as an integrable product: the entire public site is four WordPress pages (home, About
+    Mirage, Meet Our Team, News) with no developer, docs, API or sign-up link anywhere in the navigation
+    or footer, and the only other live host, the deployed Mirage FMV application at fmv-mirage.global.percipient.ai,
+    serves a login SPA with a 404 on every contract and /.well-known/ path.'
+  evidence:
+  - url: https://percipient.ai/
+    status: 200
+  - url: https://percipient.ai/openapi.json
+    status: 404
+  - url: https://percipient.ai/.well-known/api-catalog
+    status: 404
+  - url: https://fmv-mirage.global.percipient.ai/
+    status: 200
+  - url: https://fmv-mirage.global.percipient.ai/openapi.json
+    status: 404
+  checked: '2026-08-26'

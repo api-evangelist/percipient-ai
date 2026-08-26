@@ -1,0 +1,69 @@
+generated: '2026-08-26'
+method: probed
+source: live HTTP probes of every Percipient.ai host discovered in STEP 0/0b
+note: >-
+  Every /.well-known/ path probed on both Percipient.ai hosts returned a genuine 404.
+  hit_count is 0, so NO WellKnown and NO SecurityTxt pointer is emitted in apis.yml —
+  this file records a measured absence, not a served discovery surface.
+hit_count: 0
+hosts:
+- host: https://percipient.ai
+  note: >-
+    WordPress marketing site on Flywheel hosting. Returns a themed HTML 404 body with a
+    correct 404 status on every unknown path, including the soft-404 control probe below,
+    so these are true negatives rather than an SPA catch-all.
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: https://fmv-mirage.global.percipient.ai
+  note: >-
+    Deployed Mirage FMV customer application (nginx in front of a Django app). Serves a
+    693-byte no-store SPA shell at / and a 555-byte nginx 404 on every other path.
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+soft_404_control:
+- url: https://percipient.ai/this-path-should-not-exist-xyz123
+  status: 404
+  bytes: 129119
+- url: https://fmv-mirage.global.percipient.ai/zzz-control-xyz123
+  status: 404
+  bytes: 555

@@ -1,0 +1,22 @@
+generated: '2026-08-26'
+method: searched
+source: https://percipient.ai/
+note: >-
+  Percipient.ai publishes no pricing page, no plan tiers and no self-serve sign-up. The
+  entire site is four pages (home, About Mirage, Meet Our Team, News) with no commercial
+  surface of any kind — no /pricing, no /plans, no shopping or trial path. Mirage is sold
+  into US Government and intelligence customers through federal contracting vehicles
+  (it is listed as "Awardable" on the CDAO Tradewinds Solutions Marketplace), so price is
+  set per contract and is not published. plan_count is 0 and NO Pricing pointer is
+  emitted — this is a measured absence, not an unchecked field.
+plan_count: 0
+plans: []
+sales_model: government-contracting
+self_serve: false
+evidence:
+- url: https://percipient.ai/
+  status: 200
+  finding: no pricing or plans link in navigation or footer
+- url: https://percipient.ai/technology/
+  status: 200
+  finding: product page describes Mirage FMV/GSM/VRM modules; no price or tier

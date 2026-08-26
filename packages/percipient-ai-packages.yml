@@ -1,0 +1,47 @@
+generated: '2026-08-26'
+method: searched
+source: >-
+  registry.npmjs.org search, pypi.org/pypi/<name>/json, GitHub org + repository search,
+  and the percipient.ai website (no SDK, download or developer page exists to derive from)
+note: >-
+  No first-party Percipient.ai client library exists on any public registry. Percipient.ai
+  sells Mirage as a deployed platform to US Government and intelligence customers; it runs
+  no developer program, publishes no SDK page, and has no public source repository, so
+  there is nothing to package. package_count is 0 and NO Packages or SDKs pointer is
+  emitted in apis.yml — this file records a measured absence.
+package_count: 0
+packages: []
+registries_searched:
+- registry: npm
+  query: percipient
+  url: https://registry.npmjs.org/-/v1/search?text=percipient
+  result: no matching package
+- registry: pypi
+  queries:
+  - name: percipient
+    url: https://pypi.org/pypi/percipient/json
+    status: 404
+  - name: percipient-ai
+    url: https://pypi.org/pypi/percipient-ai/json
+    status: 404
+  - name: mirage-percipient
+    url: https://pypi.org/pypi/mirage-percipient/json
+    status: 404
+  result: no matching package
+- registry: github
+  query: 'org search "percipient"'
+  url: https://api.github.com/search/users?q=percipient
+  result: >-
+    No Percipient.ai organization exists. github.com/percipient resolves to
+    "WatchGuard Technologies" (DNSWatch / Percipient Networks, Seattle WA) and is a
+    DIFFERENT company — rejected on the STEP 0c ownership check and NOT wired.
+false_positives_rejected:
+- name: mirage-ai-com/node-mirage-api
+  url: https://github.com/mirage-ai-com/node-mirage-api
+  reason: >-
+    Name collision only. "Mirage" here is the Crisp/mirage-ai.com conversational-AI API
+    (docs.mirage-ai.com), unrelated to Percipient.ai's Mirage intelligence-analysis
+    platform. Different company, different product, different domain.
+- name: github.com/percipient
+  url: https://github.com/percipient
+  reason: 'Organization display name is "WatchGuard Technologies" — not this company.'

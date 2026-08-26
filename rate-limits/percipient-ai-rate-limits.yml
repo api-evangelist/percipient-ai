@@ -1,0 +1,21 @@
+generated: '2026-08-26'
+method: searched
+source: https://percipient.ai/
+note: >-
+  No published rate limits. Percipient.ai has no developer portal, no API reference and no
+  public API documentation of any kind, so there is no documented limit, window, burst or
+  response-header contract to record. limit_count is 0 and NO RateLimits pointer is emitted
+  in apis.yml — score.rb grants "documented" credit on the presence of a RateLimits type
+  alone, so wiring one here would credit Percipient.ai with a runtime signal it does not
+  publish. This file records a measured absence.
+limit_count: 0
+rate_limits: []
+headers_documented: []
+evidence:
+- url: https://percipient.ai/
+  status: 200
+  finding: no developer, docs or API link anywhere in navigation or footer
+- url: https://percipient.ai/docs
+  status: 404
+- url: https://fmv-mirage.global.percipient.ai/api-docs
+  status: 404
