@@ -14,6 +14,17 @@ description: 'Percipient.ai is a Silicon Valley artificial intelligence, machine
   and is listed as Awardable on the CDAO Tradewinds Solutions Marketplace. It operates no public developer
   program: as of August 2026 it publishes no API, developer portal, API reference, SDK or machine-readable
   contract of any kind.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://percipient.ai/wp-content/uploads/2020/07/preview.png
 url: https://raw.githubusercontent.com/api-evangelist/percipient-ai/refs/heads/main/apis.yml
 x-type: company
