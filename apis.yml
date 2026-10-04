@@ -52,8 +52,8 @@ created: '2026-08-26'
 modified: '2026-08-26'
 tags:
 - Artificial Intelligence
-- Machine-Learning
-- Computer-Vision
+- Machine Learning
+- Computer Vision
 - National Security
 - Defense
 - Intelligence Analysis
@@ -70,6 +70,8 @@ tags_raw:
 - Geospatial
 - Video Analytics
 - Government
+- Machine-Learning
+- Computer-Vision
 apis: []
 maintainers:
 - FN: Kin Lane
