@@ -79,6 +79,8 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: RateLimits
+  url: rate-limits/percipient-ai-rate-limits.yml
 - type: Website
   url: https://percipient.ai/
 - type: Blog
